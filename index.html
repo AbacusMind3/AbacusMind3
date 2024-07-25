@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <pre>
+    <div class="title" id="gameTitle"><span>X O</span> Game</div>
+      <table>
+        <tr>      <!--(table row): Represents a row in the HTML table. Tapping a <tr> 
+              element can be used to select the entire row.-->
+          <td class="cell" id="0" onclick="condition(this.id)"></td>     <!-- <td> (table data): Represents an individual 
+                 cell within a table row. Tapping a <td> element can be used to select that 
+                 specific cell.-->
+          <td class="cell" id="1" onclick="condition(this.id)"></td>
+          <td class="cell" id="2" onclick="condition(this.id)"></td>
+        </tr>
+        <tr> 
+          <td class="cell" id="3" onclick="condition(this.id)"></td> 
+          <td class="cell" id="4" onclick="condition(this.id)"></td>
+          <td class="cell" id="5" onclick="condition(this.id)"></td>
+        </tr>
+        <tr>
+          <td class="cell" id="6" onclick="condition(this.id)"></td>
+          <td class="cell" id="7" onclick="condition(this.id)"></td>
+          <td class="cell" id="8" onclick="condition(this.id)"></td>
+        </tr>
+      </table>
+      <div class="endgame">
+      <div class="text"></div>
+      </div>
+  </pre>
+     <div class = "selectSym">
+          <p>Select symbol:</p>
+            <button onClick="selectSym('X')">X</button>
+            <button onClick="selectSym('O')">O</button>
+          </div> 
+         <button onClick="startGame()" class="restart" >Replay</button>
+      <div class="select"> 
+        <p>Choose Game Mode:</p>
+        <button onClick="selectMode('One player')">One player</button>
+        <button onClick="selectMode('Two players')">Two players</button>
+      </div>
+          <form autocomplete="off">
+             <input class="name" id="name0" type="text" name="Player1(X)" placeholder="Player's one name (X)">
+             <input class="name" id="name1" type="text" name="Player2(O)" placeholder="Player's two name (O)">
+             <input class="cu" type="submit" value="send"> 
+             <input class="cu" type="reset" value="clear">
+           </form>
+     <button onClick="startGame()" class="restart" >Replay</button>
+  <button onClick="changeMode()" class="change" >Change Mode</button>
+
+  <div id ="questions">
+
+    <div class="show-answer"><span id="ans"></span>
+    </div>
+     <div class="para"><P>Answer the following Question :</P>
+        <div id="ques"></div>
+     </div>
+
+    <div class="intext" >
+     <input autocomplete="off" type="textf" id="intext" class="intext11">
+    </div>
+  <div class="butn">
+     <div class="box">
+       <button class ="btn" onclick="game()">Check Answer</button>
+     </div>
+     <div class="continue">
+       <button class ="continue-btn" onclick="continuee()">Continue</button>
+     </div>
+  </div>
+    <script src="./confetti.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1/dist/confetti.browser.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
